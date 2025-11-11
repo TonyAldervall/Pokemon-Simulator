@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Övning_3___Pokémon_Simulator
+{
+    internal class FirePokémon : Pokémon
+    {
+        public FirePokémon(string name, int level, List<Attack> attacks) : base(name, level, ElementType.Fire, attacks)
+        {
+        }
+    }
+}
