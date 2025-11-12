@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Övning_3___Pokémon_Simulator
+namespace Pokémon_Simulator
 {
     internal class Program
     {

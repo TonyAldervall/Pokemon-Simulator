@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Övning_3___Pokémon_Simulator
+namespace Pokémon_Simulator
 {
     internal class Charmander : FirePokémon, IEvolvable
     {
@@ -14,7 +14,7 @@ namespace Övning_3___Pokémon_Simulator
 
         public void Evolve()
         {
-            this.Name = "Charmander";
+            this.Name = "Charmeleon";
             this.Level += 10;
             Console.WriteLine($"Charmander is evolving... Now it is a Charmeleon and its level is {this.Level}!");
         }
