@@ -13,5 +13,9 @@ namespace PokémonSimulator
             Blastoise blastoise = new Blastoise(Level, Attacks);
             return blastoise;
         }
+        public override void Speak()
+        {
+            Console.WriteLine($"{Name} says: Wartortle! Wartortle!");
+        }
     }
 }

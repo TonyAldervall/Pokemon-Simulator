@@ -14,5 +14,9 @@ namespace PokémonSimulator
             Victreebel victreebel = new Victreebel(Level, Attacks);
             return victreebel;
         }
+        public override void Speak()
+        {
+            Console.WriteLine($"{Name} says: Weepinbell! Weepinbell!");
+        }
     }
 }

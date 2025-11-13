@@ -19,5 +19,10 @@ namespace PokémonSimulator
             Wartortle wartortle = new Wartortle(Level, Attacks);
             return wartortle;
         }
+
+        public override void Speak()
+        {
+            Console.WriteLine($"{Name} says: Squirtle! Squirtle!");
+        }
     }
 }

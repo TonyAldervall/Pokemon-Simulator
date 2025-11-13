@@ -17,5 +17,9 @@ namespace PokémonSimulator
             Console.WriteLine($"{Name} is evolving... Now it is a Venusaur!");
             return new Venusaur(this.Level, this.Attacks);
         }
+        public override void Speak()
+        {
+            Console.WriteLine($"{Name} says: Ivysaur! Ivysaur!");
+        }
     }
 }

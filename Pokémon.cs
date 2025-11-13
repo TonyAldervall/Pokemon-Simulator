@@ -71,11 +71,17 @@
                 Attacks[0].Use(Level);
             }
         }
-        public void RaiseLevel()
+        public virtual Pokémon RaiseLevel()
         {
             // Ökar nivån på Pokémon och skriver ut att den har levlat upp.
             Level++;
             Console.WriteLine($"{Name} has leveled up to level {Level}!");
+            return this;
+        }
+
+        public virtual void Speak()
+        {
+            Console.WriteLine($"{Name} says: Rawr!");
         }
 
         public override string ToString()

@@ -18,5 +18,9 @@ namespace PokémonSimulator
             Weepinbell weepinbell = new Weepinbell(Level, Attacks);
             return weepinbell;
         }
+        public override void Speak()
+        {
+            Console.WriteLine($"{Name} says: Bellsprout! Bellsprout!");
+        }
     }
 }

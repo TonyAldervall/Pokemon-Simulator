@@ -19,5 +19,10 @@ namespace PokémonSimulator
             Ivysaur ivysaur = new Ivysaur(Level, Attacks);
             return ivysaur;
         }
+
+        public override void Speak()
+        {
+            Console.WriteLine($"{Name} says: Bulba! Bulba!");
+        }
     }
 }
