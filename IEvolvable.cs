@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokémon_Simulator
+namespace PokémonSimulator
 {
     internal interface IEvolvable
     {
-        void Evolve();
+        Pokémon Evolve();
     }
 }

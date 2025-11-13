@@ -1,10 +1,11 @@
-﻿using System;
+﻿using PokémonSimulator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokémon_Simulator
+namespace PokémonSimulator
 {
     internal class Bulbasaur : GrassPokémon, IEvolvable
     {
@@ -12,11 +13,11 @@ namespace Pokémon_Simulator
         {
         }
 
-        public void Evolve()
+        public Pokémon Evolve()
         {
-            this.Name = "Ivysaur";
-            this.Level += 10;
-            Console.WriteLine($"Bulbasaur is evolving... Now it is a Ivysaur and its level is {this.Level}!");
+            Console.WriteLine($"{Name} is evolving... Now it is a Ivysaur!");
+            Ivysaur ivysaur = new Ivysaur(this.Attacks);
+            return ivysaur;
         }
     }
 }

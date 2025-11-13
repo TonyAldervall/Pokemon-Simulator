@@ -1,10 +1,11 @@
-﻿using System;
+﻿using PokémonSimulator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokémon_Simulator
+namespace PokémonSimulator
 {
     internal class Charmander : FirePokémon, IEvolvable
     {
@@ -12,11 +13,11 @@ namespace Pokémon_Simulator
         {
         }
 
-        public void Evolve()
+        public Pokémon Evolve()
         {
-            this.Name = "Charmeleon";
-            this.Level += 10;
-            Console.WriteLine($"Charmander is evolving... Now it is a Charmeleon and its level is {this.Level}!");
+            Console.WriteLine($"{Name} is evolving... Now it is a Charmeleon!");
+            Charmeleon charmeleon = new Charmeleon(this.Attacks);
+            return charmeleon;
         }
     }
 }

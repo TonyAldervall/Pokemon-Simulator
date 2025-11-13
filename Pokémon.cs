@@ -1,17 +1,47 @@
-﻿namespace Pokémon_Simulator
+﻿namespace PokémonSimulator
 {
     internal abstract class Pokémon
     {
-        public string Name { get; set; }
-        public int Level { get; set; }
-        public ElementType Type { get; }
-        public List<Attack> Attacks { get; }
+        private string _name;
+        private int _level;
+        public string Name
+        {
+            get 
+            {
+                return _name; 
+            }
+            set
+            {
+                if(value.Length < 2 || value.Length > 15)
+                {
+                    throw new ArgumentException("Name has to contain 2-15 characters.");
+                }
+                _name = value;
+            }
+        }
+        public int Level 
+        {
+            get
+            {
+                return _level;
+            } 
+            set
+            {
+                if(value < 1 || value > 100)
+                {
+                    throw new ArgumentException("Level has to be between 1-100.");
+                }
+                _level = value;
+            }
+        }
+        public List<ElementType> Types { get; }
+        public List<Attack> Attacks { get; set; }
 
-        public Pokémon(string name, int level, ElementType type, List<Attack> attacks)
+        public Pokémon(string name, int level, List<ElementType> types, List<Attack> attacks)
         {
             Name = name;
             Level = level;
-            Type = type;
+            Types = types;
             Attacks = attacks;
         }
 
@@ -27,7 +57,7 @@
             // Låter användaren välja en attack från listan och anropar dess .Use-metod.
             for (int i = 0; i < Attacks.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {Attacks[i].Name} (Type: {Attacks[i].Type}, Power: {Attacks[i].BasePower})");
+                Console.WriteLine($"{i + 1}. {Attacks[i].Name} (Type: {Attacks[i].Type}, Power: {Attacks[i].BasePower + Level})");
             }
             Console.Write("Choose an attack by entering the corresponding number: ");
             int choice = int.Parse(Console.ReadLine() ?? "1") - 1;
@@ -46,6 +76,11 @@
             // Ökar nivån på Pokémon och skriver ut att den har levlat upp.
             Level++;
             Console.WriteLine($"{Name} has leveled up to level {Level}!");
+        }
+
+        public override string ToString()
+        {
+            return $"Pokémon: {Name}, Level: {Level}, Type(s): {string.Join(", ", Types)}, C# Class: {Name}";
         }
     }
 }

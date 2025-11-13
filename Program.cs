@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Pokémon_Simulator
+namespace PokémonSimulator
 {
     internal class Program
     {
@@ -25,25 +25,54 @@ namespace Pokémon_Simulator
             grassAttacks.Add(razorleaf);
 
 
-            Charmander charmander = new Charmander(fireAttacks);
-            Squirtle squirtle = new Squirtle(waterAttacks);
-            Bulbasaur bulbasaur = new Bulbasaur(grassAttacks);
+            Pokémon charmander = new Charmander(fireAttacks);
+            Pokémon squirtle = new Squirtle(waterAttacks);
+            Pokémon bulbasaur = new Bulbasaur(grassAttacks);
+            Pokémon bellsprout = new Bellsprout(grassAttacks);
 
             List<Pokémon> pokémons = new List<Pokémon>();
 
             pokémons.Add(charmander);
             pokémons.Add(squirtle);
             pokémons.Add(bulbasaur);
+            pokémons.Add(bellsprout);
 
-            foreach (var pokémon in pokémons)
+            for (int i = 0; i < pokémons.Count; i++)
             {
-                Console.WriteLine($"Pokémon: {pokémon.Name}, Level: {pokémon.Level}, Type: {pokémon.Type}");
-                pokémon.Attack();
-                pokémon.RandomAttack();
-                pokémon.RaiseLevel();
-                if (pokémon is IEvolvable evolvablePokémon)
+                Console.WriteLine(pokémons[i].ToString());
+                pokémons[i].Attack();
+                pokémons[i].RandomAttack();
+                pokémons[i].RaiseLevel();
+                if (pokémons[i] is IEvolvable evolvablePokémon)
                 {
-                    evolvablePokémon.Evolve();
+                    Pokémon evolved = evolvablePokémon.Evolve();
+                    pokémons[i] = evolved;
+                }
+            }
+
+            for (int i = 0; i < pokémons.Count; i++)
+            {
+                Console.WriteLine(pokémons[i].ToString());
+                pokémons[i].Attack();
+                pokémons[i].RandomAttack();
+                pokémons[i].RaiseLevel();
+                if (pokémons[i] is IEvolvable evolvablePokémon)
+                {
+                    Pokémon evolved = evolvablePokémon.Evolve();
+                    pokémons[i] = evolved;
+                }
+            }
+
+            for (int i = 0; i < pokémons.Count; i++)
+            {
+                Console.WriteLine(pokémons[i].ToString());
+                pokémons[i].Attack();
+                pokémons[i].RandomAttack();
+                pokémons[i].RaiseLevel();
+                if (pokémons[i] is IEvolvable evolvablePokémon)
+                {
+                    Pokémon evolved = evolvablePokémon.Evolve();
+                    pokémons[i] = evolved;
                 }
             }
 

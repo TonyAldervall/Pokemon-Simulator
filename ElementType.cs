@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pokémon_Simulator
+namespace PokémonSimulator
 {
     internal enum ElementType
     {
         Fire,
         Water,
-        Grass
+        Grass,
+        Poison
     }
 }
