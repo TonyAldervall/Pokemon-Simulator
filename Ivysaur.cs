@@ -9,13 +9,13 @@ namespace PokémonSimulator
 {
     internal class Ivysaur : GrassPokémon, IEvolvable
     {
-        public Ivysaur(List<Attack> attacks) : base("Ivysaur", 11, attacks)
+        public Ivysaur(int level, List<Attack> attacks) : base("Ivysaur", level, attacks)
         {
         }
         public Pokémon Evolve()
         {
             Console.WriteLine($"{Name} is evolving... Now it is a Venusaur!");
-            return new Venusaur(this.Attacks);
+            return new Venusaur(this.Level, this.Attacks);
         }
     }
 }

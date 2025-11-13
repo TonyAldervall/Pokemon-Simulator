@@ -9,13 +9,13 @@ namespace PokémonSimulator
 {
     internal class Charmeleon : FirePokémon, IEvolvable
     {
-        public Charmeleon(List<Attack> attacks) : base("Charmeleon", 16, attacks)
+        public Charmeleon(int level, List<Attack> attacks) : base("Charmeleon", level, attacks)
         {
         }
         public Pokémon Evolve()
         {
             Console.WriteLine($"{Name} is evolving... Now it is a Charizard!");
-            Charizard charizard = new Charizard(this.Attacks);
+            Charizard charizard = new Charizard(Level, Attacks);
             return charizard;
         }
     }

@@ -5,7 +5,7 @@ namespace PokémonSimulator
     internal class Venusaur : GrassPokémon
     {
 
-        public Venusaur(List<Attack> attacks) : base("Venusaur", 32, attacks)
+        public Venusaur(int level, List<Attack> attacks) : base("Venusaur", level, attacks)
         {
         }
     }

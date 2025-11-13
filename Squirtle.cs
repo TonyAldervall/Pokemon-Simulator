@@ -16,7 +16,7 @@ namespace PokémonSimulator
         public Pokémon Evolve()
         {
             Console.WriteLine($"{Name} is evolving... Now it is a Wartortle!");
-            Wartortle wartortle = new Wartortle(Attacks);
+            Wartortle wartortle = new Wartortle(Level, Attacks);
             return wartortle;
         }
     }

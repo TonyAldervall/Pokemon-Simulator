@@ -16,7 +16,7 @@ namespace PokémonSimulator
         public Pokémon Evolve()
         {
             Console.WriteLine($"{Name} is evolving... Now it is a Charmeleon!");
-            Charmeleon charmeleon = new Charmeleon(this.Attacks);
+            Charmeleon charmeleon = new Charmeleon(Level, Attacks);
             return charmeleon;
         }
     }

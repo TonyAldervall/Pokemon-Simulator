@@ -15,7 +15,7 @@ namespace PokémonSimulator
         public Pokémon Evolve()
         {
             Console.WriteLine($"{Name} is evolving... Now it is a Weepinbell!");
-            Weepinbell weepinbell = new Weepinbell(this.Level, this.Attacks);
+            Weepinbell weepinbell = new Weepinbell(Level, Attacks);
             return weepinbell;
         }
     }

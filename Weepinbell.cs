@@ -11,7 +11,7 @@ namespace PokémonSimulator
         public Pokémon Evolve()
         {
             Console.WriteLine($"{Name} is evolving... Now it is a Victreebel!");
-            Victreebel victreebel = new Victreebel(this.Level, this.Attacks);
+            Victreebel victreebel = new Victreebel(Level, Attacks);
             return victreebel;
         }
     }

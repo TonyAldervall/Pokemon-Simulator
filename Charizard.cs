@@ -4,7 +4,7 @@ namespace PokémonSimulator
 {
     internal class Charizard : FirePokémon
     {
-        public Charizard(List<Attack> attacks) : base("Charizard", 36, attacks)
+        public Charizard(int level, List<Attack> attacks) : base("Charizard", level, attacks)
         {
         }
     }

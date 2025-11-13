@@ -16,7 +16,7 @@ namespace PokémonSimulator
         public Pokémon Evolve()
         {
             Console.WriteLine($"{Name} is evolving... Now it is a Ivysaur!");
-            Ivysaur ivysaur = new Ivysaur(this.Attacks);
+            Ivysaur ivysaur = new Ivysaur(Level, Attacks);
             return ivysaur;
         }
     }
